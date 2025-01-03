@@ -9,10 +9,10 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <img src="../assets/banner.png" alt="Banner">
+            <img id="options-button" src="../assets/banner.png" alt="Banner">
             <h1>Crusader's Grid</h1>
         </div>
-        <div class="main-content">
+        <div class="hud-content">
             <video autoplay loop muted>
                 <source src="../assets/medieval-european-village-moewalls-com.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -23,6 +23,26 @@
                 <button id="start-hud">Start Your Adventure</button>
             </div>
         </div>
+        
+        <div class="game-content">
+            <div class="header-img">
+                <div class="header-click">
+                    <div class="left-header">
+                        <p>How To Play</p>
+                        <p>Credits</p>
+                    </div>
+                    <div class="right-header">
+                        <img src="../assets/knight.png" alt="Knight">
+                    </div>
+                </div>  
+                <img id="battle-img" src="../assets/battleimg.svg" alt="Header">
+            </div>
+            <h2>Tic Tac Toe Battle</h2>
+            <div id="game-board">
+            </div>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

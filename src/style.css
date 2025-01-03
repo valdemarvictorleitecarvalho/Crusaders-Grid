@@ -54,7 +54,7 @@ body {
     transform: scale(1.1);
 }
 
-.main-content {
+.hud-content {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
     display: flex;
@@ -64,7 +64,7 @@ body {
     position: relative;
 }
 
-.main-content video {
+.hud-content video {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -107,4 +107,103 @@ body {
 .hero-section button:hover {
     background-color: #b91c1c;
     transform: scale(1.05);
+}
+
+.game-content {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: none;
+    grid-template-rows: 0.5fr 0.5fr 4fr;
+}
+
+.game-content img {
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+    object-position: 50% 70%;
+}
+
+.header-img {
+    position: relative;
+}
+
+.header-click {
+    grid-row: 1 / 2;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7); 
+    border-bottom: 2px solid #f59e0b; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    transform: translateX(-1%); 
+    animation: slideInFromLeft 0.7s ease-out forwards; 
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-1%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.header-click img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    border: 2px solid #ffdd57; 
+    box-shadow: 0px 2px 4px rgba(255, 223, 87, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.header-click img:hover {
+    transform: scale(1.1);
+}
+
+.right-header, .left-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.left-header p {
+    font-size: 1rem;
+    color: #ffdd57; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease; 
+}
+
+.left-header p:hover {
+    color: #ffffff; 
+    transform: scale(1.1); 
+}
+
+.right-header img {
+    width: 65px;
+    height: 65px;
+    border-radius: 10px; 
+    object-fit: cover;
+    border: 2px solid #f59e0b;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.game-content h2 {
+    grid-row: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    color: #991b1b;
+}
+
+#game-board {
+    grid-row: 3 / 4;
 }
