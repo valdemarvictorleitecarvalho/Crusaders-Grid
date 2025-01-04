@@ -3,6 +3,7 @@ const hudContentDiv = document.querySelector('.hud-content');
 const gameContentDiv = document.querySelector('.game-content');
 const headerClickDiv = document.querySelector('.header-click');
 const optionsButton = document.getElementById('options-button');
+const gameBoard = document.getElementById('game-board');
 
 startHudButton.addEventListener('click', () => {
     hudContentDiv.remove();
